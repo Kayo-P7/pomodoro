@@ -1,0 +1,22 @@
+.menu{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+
+
+}
+
+.menuLink{
+    color: var(--text-over-primary);
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+

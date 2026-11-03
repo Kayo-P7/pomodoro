@@ -1,0 +1,33 @@
+.input{
+    background-color: transparent;
+    border: 0.2rem solid transparent;
+    border-bottom: 0.2rem solid var(--primary);
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    border-radius: .8rem;
+    color: var(--text-default);
+    transition: all 0.1s ease-in-out;
+
+}
+
+.input:focus{
+    border: 0.2rem solid var(--primary);
+}
+
+.input::placeholder{
+    font-family: "Noto Sans Old Italic";
+}
+
+.input:disabled{
+    border-bottom: 0.2rem solid var(--warning);
+    color: var(--text-muted);
+}
+
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}

@@ -1,0 +1,36 @@
+.cycles {
+    font-size: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.cyclesDots {
+
+    display: flex;
+    gap: 1.3rem;
+}
+
+.clycleDot {
+    background-color: var(--primary);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+
+}
+
+.workTime {
+    background-color: var(--warning);
+}
+
+.shortBreakTime {
+    background-color: var(--primary);
+}
+
+.longBreakTime {
+    background-color: var(--info);
+}
