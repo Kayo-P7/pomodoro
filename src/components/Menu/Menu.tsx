@@ -1,7 +1,7 @@
 // @ts-ignore
 import style from './Menu.module.css';
 import * as React from "react";
-import {HistoryIcon, HomeIcon, SettingsIcon, SunIcon} from "lucide-react";
+import {HistoryIcon, HomeIcon, MoonIcon, SettingsIcon, SunIcon} from "lucide-react";
 import {useEffect, useState} from "react";
 import global from "../../style/global.module.css"
 
@@ -57,7 +57,7 @@ export function Menu() {
                    title="trocar de tema"
                 onClick={handleThemeChange }
                 >
-                    <SunIcon/>
+                    {darkMode === 'dark' ? <SunIcon/> : <MoonIcon/>}
                 </a>
             </nav>
         </div>
