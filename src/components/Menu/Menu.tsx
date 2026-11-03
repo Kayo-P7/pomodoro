@@ -2,14 +2,17 @@
 import style from './Menu.module.css';
 import * as React from "react";
 import {HistoryIcon, HomeIcon, SettingsIcon, SunIcon} from "lucide-react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import global from "../../style/global.module.css"
 
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
 
-    const [darkMode, setDarkMode] = useState<AvailableThemes>('dark')
+    const [darkMode, setDarkMode] = useState<AvailableThemes>(() => {
+        const darkTheme = (localStorage.getItem('theme') as AvailableThemes) || 'dark';
+        return darkTheme
+    })
 
     function handleThemeChange(event : React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
         event.preventDefault()
@@ -22,6 +25,12 @@ export function Menu() {
         document.documentElement.setAttribute('data-theme', darkMode)
         return setDarkMode(darkMode === 'dark' ? 'light' : 'dark')
     }
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', darkMode);
+        localStorage.setItem('theme', darkMode)
+    }, [darkMode]);
+
     return (
         <div className={darkMode ? global.light : global.dark}>
             <nav className={style.menu}>
