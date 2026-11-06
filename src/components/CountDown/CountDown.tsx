@@ -1,15 +1,17 @@
 // @ts-ignore
 import style from './CountDown.module.css';
 import * as React from "react";
-import {TimerIcon} from "lucide-react";
-
+import {useTaskContext} from "../../contexts/TaskContext/useTaskContext";
 
 export function CountDown(){
 
+const {state} = useTaskContext()
 
     return(
-        <>
-            <div className={style.container} ><h1>00:00</h1></div>
-        </>
+            <div className={style.container} >
+                <h1>
+                    {state.formattedSecondsRemaining}
+                </h1>
+            </div>
     )
 }
