@@ -3,7 +3,6 @@ import {Cycles} from "../Cycles/Cycles";
 import {DefaultButton} from "../DefaultButton/DefaultButton";
 import {PlayCircleIcon} from "lucide-react";
 
-
 export function MainForm(){
     return(
         <form className="form" action="">
@@ -16,6 +15,10 @@ export function MainForm(){
                     placeholder="qual o nome da tarefa?"
 
                 />
+            </div>
+
+            <div className='formRow'>
+                <p>Proximo intervalo e de 25min</p>
             </div>
 
             <div className="formRow">
